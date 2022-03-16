@@ -28,7 +28,7 @@
  * 
  */
 
-#include <SPI.h>
+#include <SPI1.h>
 #include <MFRC522.h>
 
 #define RST_PIN         9           // Configurable, see typical pin layout above
@@ -50,7 +50,7 @@ void clearInt(MFRC522 mfrc522);
 void setup() {
   Serial.begin(115200); // Initialize serial communications with the PC
   while (!Serial);      // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
-  SPI.begin();          // Init SPI bus
+  SPI1.begin();          // Init SPI bus
 
   mfrc522.PCD_Init(); // Init MFRC522 card
 

@@ -22,7 +22,7 @@
  *
  */
 
-#include <SPI.h>
+#include <SPI1.h>
 #include <MFRC522.h>
 
 #define RST_PIN         9           // Configurable, see typical pin layout above
@@ -59,7 +59,7 @@ char choice;
 void setup() {
     Serial.begin(9600);         // Initialize serial communications with the PC
     while (!Serial);            // Do nothing if no serial port is opened (added for Arduinos based on ATMEGA32U4)
-    SPI.begin();                // Init SPI bus
+    SPI1.begin();                // Init SPI bus
     mfrc522.PCD_Init();         // Init MFRC522 card
     Serial.println(F("Try the most used default keys to print block 0 to 63 of a MIFARE PICC."));
     Serial.println("1.Read card \n2.Write to card \n3.Copy the data.");

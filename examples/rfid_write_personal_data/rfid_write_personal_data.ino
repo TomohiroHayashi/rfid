@@ -21,7 +21,7 @@
  * The reader can be found on eBay for around 5 dollars. Search for "mf-rc522" on ebay.com. 
  */
 
-#include <SPI.h>
+#include <SPI1.h>
 #include <MFRC522.h>
 
 #define RST_PIN         9           // Configurable, see typical pin layout above
@@ -31,7 +31,7 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);   // Create MFRC522 instance
 
 void setup() {
   Serial.begin(9600);        // Initialize serial communications with the PC
-  SPI.begin();               // Init SPI bus
+  SPI1.begin();               // Init SPI bus
   mfrc522.PCD_Init();        // Init MFRC522 card
   Serial.println(F("Write personal data on a MIFARE PICC "));
 }

@@ -16,7 +16,7 @@
 #define __STDC_LIMIT_MACROS
 #include <stdint.h>
 #include <Arduino.h>
-#include <SPI.h>
+#include <SPI1.h>
 
 #ifndef MFRC522_SPICLOCK
 #define MFRC522_SPICLOCK (4000000u)	// MFRC522 accept upto 10MHz, set to 4MHz.

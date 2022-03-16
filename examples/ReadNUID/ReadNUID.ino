@@ -30,7 +30,7 @@
  * More pin layouts for other boards can be found here: https://github.com/miguelbalboa/rfid#pin-layout
  */
 
-#include <SPI.h>
+#include <SPI1.h>
 #include <MFRC522.h>
 
 #define SS_PIN 10
@@ -45,7 +45,7 @@ byte nuidPICC[4];
 
 void setup() { 
   Serial.begin(9600);
-  SPI.begin(); // Init SPI bus
+  SPI1.begin(); // Init SPI bus
   rfid.PCD_Init(); // Init MFRC522 
 
   for (byte i = 0; i < 6; i++) {
